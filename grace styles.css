@@ -1,0 +1,85 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0 2em; /* Adds side padding */
+    text-align: left;
+    letter-spacing: 0.7px;
+}
+
+h1, p {
+    margin: 0;
+    padding: 1em 0;
+    letter-spacing: 0.7px;
+}
+
+a {
+    color: #657a62;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+}
+
+a:hover {
+    color: #D2B450;
+    text-decoration: underline;
+}
+
+/* Flex container for image and text */
+.content-container {
+    display: flex;
+    flex-direction: row-reverse; /* Flips image to right, text to left */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em 0; /* Top and bottom padding only */
+    gap: 40px; /* Increased gap between image and text */
+    flex-wrap: nowrap;
+}
+
+.content-container img {
+    width: 66.67%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 700px;
+    flex: 1;
+}
+
+.text-container p {
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: 0.7px;
+}
+
+
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    h1, p {
+        font-size: 12px;
+	letter-spacing: 0.7px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1em 1em;
+    }
+
+    .content-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-container {
+        align-items: center;
+        max-width: 100%;
+    }
+}
